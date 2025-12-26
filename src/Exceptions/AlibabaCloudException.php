@@ -12,7 +12,7 @@ class AlibabaCloudException extends DaraException {
   /**
   * @var string
   */
-  protected $code;
+  public $code;
   /**
   * @var string
   */
@@ -24,7 +24,7 @@ class AlibabaCloudException extends DaraException {
   /**
   * @var string
   */
-  protected $requestId;
+  public $requestId;
 
   public function __construct($map)
   {
@@ -42,20 +42,6 @@ class AlibabaCloudException extends DaraException {
   public function getStatusCode()
   {
     return $this->statusCode;
-  }
-  /**
-  * @return string
-  */
-  public function getCode()
-  {
-    return $this->code;
-  }
-  /**
-  * @return string
-  */
-  public function getMessage()
-  {
-    return $this->message;
   }
   /**
   * @return string

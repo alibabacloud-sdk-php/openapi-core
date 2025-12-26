@@ -3,8 +3,7 @@
 // This file is auto-generated, don't edit it. Thanks.
  
 namespace Darabonba\OpenApi\Exceptions;
-use AlibabaCloud\Dara\Exception\DaraException;
-class ClientException extends DaraException {
+class ClientException extends AlibabaCloudException {
   /**
   * @var mixed[]
   */
