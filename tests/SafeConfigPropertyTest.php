@@ -145,9 +145,10 @@ class SafeConfigPropertyTest extends TestCase
         $thrown = false;
         try {
             $client->checkConfig($config);
-        } catch (\Throwable $e) {
-            // ClientException historically requires statusCode; either ClientException
-            // or the ctor Error proves we entered the ParameterMissing throw branch.
+        } catch (\Exception $e) {
+            // PHP 5.6 has no Throwable. ClientException historically requires
+            // statusCode; either ClientException or the ctor Error proves we
+            // entered the ParameterMissing throw branch.
             $thrown = true;
             $this->assertTrue(
                 ($e instanceof ClientException)
